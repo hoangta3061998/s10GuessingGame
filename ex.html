@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function guessingGame(arr) {
+        let i = Math.floor(Math.random() * 99);
+        let time = 1;
+        for (time; time < 10; time++) {
+            let num = parseInt(prompt("Enter your number : "));
+            if (num === arr[i]) {
+                alert(time + "Guess : " + "You're right!");
+                break;
+            } else if (num < arr[i]) {
+                alert(time + "Guess : " +
+                    " Too low"
+                );
+
+            } else {
+                alert(time + " Guess : " + "Too high!");
+            }
+        }
+    }
+    var nums = [];
+    for (let i = 0 ; i < 100; i++) {
+        nums[i] = i;
+    }
+    guessingGame(nums);
+
+</script>
+</body>
+</html>
